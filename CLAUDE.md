@@ -40,3 +40,16 @@ This is a standard Flutter application called "yuni_flutter_demo" - a new Flutte
 
 ## Testing
 Run tests with `flutter test` - currently includes widget tests in `test/widget_test.dart`.
+
+## 通知配置
+
+在开发过程中，Claude 应该在以下情况发送通知：
+
+- **需要授权操作时**：当需要用户授权的操作时，发送通知提醒
+- **任务完成时**：每次运行完成后，发送完成通知
+- **代码修改过程中**：当认为需要通知用户进展或状态时
+
+发送通知的方法：
+```bash
+./scripts/notify.sh "简短的通知内容"
+```
