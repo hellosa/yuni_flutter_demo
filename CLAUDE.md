@@ -53,3 +53,11 @@ Run tests with `flutter test` - currently includes widget tests in `test/widget_
 ```bash
 ./scripts/notify.sh "简短的通知内容"
 ```
+
+## Testflight
+一般情况下，不要自动构建 testflight ，除非是用户要求
+
+构建 testflight 的脚本：
+```bash
+./scripts/build_testflight.sh
+```
