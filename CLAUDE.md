@@ -1,0 +1,42 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+This is a standard Flutter application called "yuni_flutter_demo" - a new Flutter project with the default counter app template.
+
+## Development Commands
+
+### Core Flutter Commands
+- `flutter run` - Run the app in debug mode on connected device/emulator
+- `flutter run -d <device-id>` - Run on specific device (use `flutter devices` to list)
+- `flutter build apk` - Build Android APK
+- `flutter build ios` - Build iOS app (requires macOS)
+- `flutter build web` - Build for web deployment
+
+### Development Workflow
+- `flutter pub get` - Install/update dependencies
+- `flutter pub upgrade` - Upgrade dependencies to latest compatible versions
+- `flutter analyze` - Run static analysis (uses analysis_options.yaml configuration)
+- `flutter test` - Run all tests in test/ directory
+- `flutter clean` - Clean build cache and artifacts
+
+### Hot Reload/Restart
+- Press `r` during `flutter run` for hot reload
+- Press `R` during `flutter run` for hot restart
+
+## Project Structure
+- `lib/` - Main Dart source code
+  - `lib/main.dart` - Entry point with MyApp and MyHomePage widgets
+- `test/` - Test files
+- `pubspec.yaml` - Dependencies and Flutter configuration
+- `analysis_options.yaml` - Lint rules and static analysis configuration
+- Platform-specific folders: `android/`, `ios/`, `web/`, `macos/`, `linux/`, `windows/`
+
+## Dependencies
+- Uses `flutter_lints: ^5.0.0` for code quality
+- Material Design with `cupertino_icons: ^1.0.8`
+- Targets Dart SDK ^3.9.2
+
+## Testing
+Run tests with `flutter test` - currently includes widget tests in `test/widget_test.dart`.
