@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- 导出方法: app-store-connect (用于 TestFlight 和 App Store) -->
+	<key>method</key>
+	<string>app-store-connect</string>
+	
+	<!-- 自动管理签名和构建号 -->
+	<key>manageAppVersionAndBuildNumber</key>
+	<true/>
+	
+	<!-- 上传符号表 -->
+	<key>uploadSymbols</key>
+	<true/>
+	
+	<!-- 团队 ID -->
+	<key>teamID</key>
+	<string>W5W85Z7TLP</string>
+	
+	<!-- 代码签名配置 -->
+	<key>signingStyle</key>
+	<string>automatic</string>
+	
+	<!-- 目标设备：直接上传 -->
+	<key>destination</key>
+	<string>upload</string>
+</dict>
+</plist>
