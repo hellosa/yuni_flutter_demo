@@ -69,25 +69,13 @@ xcodebuild -workspace Runner.xcworkspace \
 # 导出并上传到 App Store Connect（自动更新配置文件）
 echo "📤 导出并上传到 App Store Connect..."
 
-# 检查是否有 API Key 配置（用于 CI/CD）
-if [ ! -z "$API_KEY_ID" ] && [ ! -z "$API_ISSUER_ID" ]; then
-    echo "🔑 使用 API Key 认证..."
-    xcodebuild -exportArchive \
-               -archivePath build/Runner.xcarchive \
-               -exportPath build/ \
-               -exportOptionsPlist ExportOptions.plist \
-               -allowProvisioningUpdates \
-               -authenticationKeyPath "$API_PRIVATE_KEY_PATH" \
-               -authenticationKeyID "$API_KEY_ID" \
-               -authenticationKeyIssuerID "$API_ISSUER_ID"
-else
-    echo "🔑 使用 Xcode 账户认证..."
-    xcodebuild -exportArchive \
-               -archivePath build/Runner.xcarchive \
-               -exportPath build/ \
-               -exportOptionsPlist ExportOptions.plist \
-               -allowProvisioningUpdates
-fi
+# 使用 Xcode 账户认证（需要 Xcode 已登录）
+echo "🔑 使用 Xcode 账户认证..."
+xcodebuild -exportArchive \
+           -archivePath build/Runner.xcarchive \
+           -exportPath build/ \
+           -exportOptionsPlist ExportOptions.plist \
+           -allowProvisioningUpdates
 
 # 注意：由于 ExportOptions.plist 中设置了 destination: upload
 # xcodebuild 会自动上传到 App Store Connect，无需额外步骤
