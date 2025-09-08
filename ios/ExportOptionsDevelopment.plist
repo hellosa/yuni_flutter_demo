@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- 导出方法: development (用于测试) -->
+	<key>method</key>
+	<string>development</string>
+	
+	<!-- 团队 ID -->
+	<key>teamID</key>
+	<string>W5W85Z7TLP</string>
+	
+	<!-- 代码签名配置 -->
+	<key>signingStyle</key>
+	<string>automatic</string>
+	
+	<!-- 编译选项 -->
+	<key>compileBitcode</key>
+	<false/>
+	
+	<!-- 允许设备测试 -->
+	<key>stripSwiftSymbols</key>
+	<true/>
+</dict>
+</plist>
